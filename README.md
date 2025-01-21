@@ -1,1 +1,1 @@
-# It contains the work done in DS Lab.
+# This repository contains the work done in DS Lab.
