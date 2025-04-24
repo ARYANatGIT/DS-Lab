@@ -35,8 +35,8 @@ struct Node* buildTree(int inorder[], int preorder[], int inStart, int inEnd, in
 
     int inIndex=search(inorder, inStart, inEnd, current);
 
-    node->left=buildTree(inorder, preorder, inStart, inIndex - 1, preIndex);
-    node->right=buildTree(inorder, preorder, inIndex + 1, inEnd, preIndex);
+    node->left=buildTree(inorder, preorder, inStart, inIndex-1, preIndex);
+    node->right=buildTree(inorder, preorder, inIndex+1, inEnd, preIndex);
 
     return node;
 }
@@ -45,7 +45,7 @@ void printInorder(struct Node* node) {
     if (node==NULL)
         return;
     printInorder(node->left);
-    printf("%d ", node->data);
+    printf("%d ",node->data);
     printInorder(node->right);
 }
 
